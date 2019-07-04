@@ -14,18 +14,28 @@
         Donec suscipit orci eget rutrum vestibulum. Proin lectus risus, placerat vitae tempor sed, ultricies non enim.</p>
       </template>
     </ToDoList>
+    <UsersList>
+      <template slot-scope="slotProps">
+        <span v-if="slotProps.user.isGoingToExit">Ide na exit</span>
+        {{ `${slotProps.user.name} ide na exit : ${slotProps.user.isGoingToExit}` }} 
+      </template>
+    </UsersList>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import ToDoList from './components/ToDoList'
+import UsersList from './components/UsersList'
 
 export default {
   components: {
     HelloWorld,
-    ToDoList
-  }
+    ToDoList,
+    UsersList
+  },
+
+  
 }
 </script>
 
