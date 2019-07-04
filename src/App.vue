@@ -1,17 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ToDoList>
+      <template slot="title">
+        <h1>Title</h1>
+      </template>
+      <p> I am the text from the parent component</p>
+      <template slot="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Morbi cursus consectetur quam, id mollis tortor cursus et. Sed lobortis ullamcorper nunc et rutrum. 
+        Quisque ac lectus in eros consectetur luctus. Sed elementum tortor at tincidunt auctor. Suspendisse potenti. 
+        Morbi scelerisque mattis tincidunt. Nulla neque sapien, posuere vel lacus sed, cursus consequat erat. 
+        Maecenas enim dui, condimentum in enim aliquam, lobortis malesuada mauris. Donec nec diam sit amet felis pharetra egestas. 
+        Donec suscipit orci eget rutrum vestibulum. Proin lectus risus, placerat vitae tempor sed, ultricies non enim.</p>
+      </template>
+    </ToDoList>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import ToDoList from './components/ToDoList'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
+    ToDoList
   }
 }
 </script>
